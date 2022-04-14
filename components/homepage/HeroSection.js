@@ -18,7 +18,7 @@ const params = {
   }
 };
 const images = [
-  '/images/home-1.jpg',
+  '/images/takeover_whitespace.png',
   '/images/home-2.jpg',
   '/images/home-3.jpg',
   '/images/home-4.jpg',
@@ -38,7 +38,7 @@ export default function HeroSection() {
               }}
             >
               <p className="font-size-display5 font-family-secondary mb-4 text-center hero-header">
-                The care you&apos;ve always needed
+                Feel it Takeover
               </p>
               <p className="text-transform-uppercase font-size-title mb-5 hero-subheader">
                 A range of products for you

@@ -94,7 +94,7 @@ class Header extends Component {
   animate() {
     const { transparent } = this.props;
 
-    if (!transparent) {return;}
+    if (!transparent) { return; }
 
     if (window.scrollY > 10) {
       this.header.current.classList.add('invert');
@@ -140,11 +140,11 @@ class Header extends Component {
     if (loggedIn) {
       return (
         <div className="d-flex align-items-center">
-          { customer && customer.firstname && (
+          {customer && customer.firstname && (
             <span className="mr-2 font-weight-regular">
-              Hi, { customer.firstname }!
+              Hi, {customer.firstname}!
             </span>
-          ) }
+          )}
           <Link href="/account">
             <a className="font-color-black mx-2">
               My account
@@ -179,9 +179,8 @@ class Header extends Component {
         <Cart isOpen={showCart} toggle={value => this.toggleCart(value)} />
         <div
           ref={this.header}
-          className={`d-flex header align-items-center justify-content-between position-relative ${
-            transparent ? '' : 'invert'
-          }`}
+          className={`d-flex header align-items-center justify-content-between position-relative ${transparent ? '' : 'invert'
+            }`}
         >
           <div className="d-none d-sm-flex">
             <Link href="/collection">
@@ -201,7 +200,7 @@ class Header extends Component {
             <Link href="/">
               <a>
                 <img
-                  src="/images/commerce.svg"
+                  src="/images/logosmall.png"
                   className="logo cursor-pointer"
                   alt="Logo"
                 />
@@ -209,12 +208,12 @@ class Header extends Component {
             </Link>
           </div>
           <div className="d-flex">
-            { process.browser && this.renderLoginLogout() }
+            {process.browser && this.renderLoginLogout()}
             <div
               className="position-relative cursor-pointer"
               onClick={this.toggleCart}
             >
-              <Animation isStopped={ this.state.playAddToCartAnimation } />
+              <Animation isStopped={this.state.playAddToCartAnimation} />
               <div className="cart-count position-absolute font-size-tiny font-weight-bold">
                 {cart.total_items}
               </div>
